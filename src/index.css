@@ -1,0 +1,15 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+Khojki&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.maskImage {
+    -webkit-mask-image: linear-gradient(black, transparent);
+    mask-image: linear-gradient(black, transparent);
+}
+* {
+    font-family: "Noto Sans Khojki", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
