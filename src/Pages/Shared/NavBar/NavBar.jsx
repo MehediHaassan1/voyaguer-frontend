@@ -3,10 +3,6 @@ import { Menu, Transition } from "@headlessui/react";
 import { Fragment } from "react";
 import { Link, NavLink } from "react-router-dom";
 import logo from "../../../assets/VOYAGUER-LOGO.svg";
-import AOS from "aos";
-import "aos/dist/aos.css";
-
-AOS.init();
 
 const NavBar = () => {
     const user = false;
@@ -301,7 +297,10 @@ const NavBar = () => {
                                 </Menu>
                             </div>
                         ) : (
-                            <Link to='/login' className="bg-[#DE7017] rounded py-2 px-4 text-white font-semibold tracking-wider">
+                            <Link
+                                to="/login"
+                                className="bg-[#DE7017] rounded px-6 py-2 text-white font-semibold tracking-wider"
+                            >
                                 Login
                             </Link>
                         )}
