@@ -5,7 +5,7 @@ import {
     FaTwitter,
     FaLinkedinIn,
 } from "react-icons/fa";
-
+import { IoIosArrowRoundDown } from "react-icons/io";
 const Banner = () => {
     return (
         <div className="min-h-screen maskImage relative bg-cover bg-center bg-[url(https://images.unsplash.com/photo-1485470733090-0aae1788d5af?q=80&w=1517&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)]">
@@ -68,6 +68,10 @@ const Banner = () => {
                             <FaLinkedinIn className="w-6 h-6" />
                         </Link>
                     </div>
+                </div>
+                <div className="absolute bottom-0 left-0 animate-bounce flex flex-col items-center justify-center">
+                    <IoIosArrowRoundDown className="text-orange-300 h-10 w-10" />
+                    <p className="text-white">scroll down</p>
                 </div>
             </div>
         </div>

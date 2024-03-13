@@ -5,14 +5,14 @@ import { Link, NavLink } from "react-router-dom";
 import logo from "../../../assets/VOYAGUER-LOGO.svg";
 
 const NavBar = () => {
-    const user = false;
+    const user = true;
     return (
         <div
             data-aos="fade-down"
             className="fixed top-0 h-16 w-full bg-gray-900 bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-10 z-50"
         >
             <div className="max-w-screen-xl mx-auto">
-                <div className="navbar">
+                <div className="navbar p-0">
                     <div className="navbar-start">
                         <div className="lg:hidden">
                             <Menu as="div" className="relative inline-block">
@@ -233,11 +233,16 @@ const NavBar = () => {
                                     className="relative inline-block text-left"
                                 >
                                     <div>
-                                        <Menu.Button className="inline-flex w-full justify-center rounded-full text-sm font-medium text-white hover:bg-black/30 focus:outline-none focus-visible:ring-2 focus-visible:ring-white/75">
+                                        <Menu.Button className="inline-flex items-center gap-2 w-full justify-center rounded-full text-sm font-medium text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-white/75">
                                             <div className="avatar">
-                                                <div className="w-12 rounded-full">
+                                                <div className="w-8 rounded-full">
                                                     <img src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />
                                                 </div>
+                                            </div>
+                                            <div>
+                                                <h1 className="text-lg">
+                                                    Hi Mehedi
+                                                </h1>
                                             </div>
                                         </Menu.Button>
                                     </div>
