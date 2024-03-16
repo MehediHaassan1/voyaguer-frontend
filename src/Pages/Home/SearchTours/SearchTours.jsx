@@ -23,7 +23,7 @@ const SearchTours = () => {
     console.log(formattedStartDate, formattedEndDate);
 
     return (
-        <div className="max-w-screen-xl mx-auto my-20">
+        <div data-aos="fade-up" className="max-w-screen-xl mx-auto my-20">
             <h1 className="text-3xl lg:text-5xl text-white text-center">
                 Search for tours
             </h1>
