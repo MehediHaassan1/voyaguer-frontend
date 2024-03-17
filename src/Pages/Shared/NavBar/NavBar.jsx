@@ -145,8 +145,8 @@ const NavBar = () => {
                                     className={({ isActive }) =>
                                         [
                                             isActive
-                                                ? "border-b-2 border-[#de7017] rounded focus:text-white"
-                                                : "rounded text-white",
+                                                ? "border-b-2 border-orange-700 rounded-none focus:text-white"
+                                                : "rounded-none text-white my-btn-hover",
                                         ].join(" ")
                                     }
                                 >
@@ -159,8 +159,8 @@ const NavBar = () => {
                                     className={({ isActive }) =>
                                         [
                                             isActive
-                                                ? "border-b-2 border-[#de7017] rounded focus:text-white"
-                                                : "rounded text-white",
+                                                ? "border-b-2 border-orange-700 rounded-none focus:text-white"
+                                                : "rounded-none text-white my-btn-hover",
                                         ].join(" ")
                                     }
                                 >
@@ -173,8 +173,8 @@ const NavBar = () => {
                                     className={({ isActive }) =>
                                         [
                                             isActive
-                                                ? "border-b-2 border-[#de7017] rounded focus:text-white"
-                                                : "rounded text-white",
+                                                ? "border-b-2 border-orange-700 rounded-none focus:text-white"
+                                                : "rounded-none text-white my-btn-hover",
                                         ].join(" ")
                                     }
                                 >
@@ -187,8 +187,8 @@ const NavBar = () => {
                                     className={({ isActive }) =>
                                         [
                                             isActive
-                                                ? "border-b-2 border-[#de7017] rounded focus:text-white"
-                                                : "rounded text-white",
+                                                ? "border-b-2 border-orange-700 rounded-none focus:text-white"
+                                                : "rounded-none text-white my-btn-hover",
                                         ].join(" ")
                                     }
                                 >
@@ -201,8 +201,8 @@ const NavBar = () => {
                                     className={({ isActive }) =>
                                         [
                                             isActive
-                                                ? "border-b-2 border-[#de7017] rounded focus:text-white"
-                                                : "rounded text-white",
+                                                ? "border-b-2 border-orange-700 rounded-none focus:text-white"
+                                                : "rounded-none text-white my-btn-hover",
                                         ].join(" ")
                                     }
                                 >
@@ -215,8 +215,8 @@ const NavBar = () => {
                                     className={({ isActive }) =>
                                         [
                                             isActive
-                                                ? "border-b-2 border-[#de7017] rounded focus:text-white"
-                                                : "rounded text-white",
+                                                ? "border-b-2 border-orange-700 rounded-none focus:text-white"
+                                                : "rounded-none text-white my-btn-hover",
                                         ].join(" ")
                                     }
                                 >

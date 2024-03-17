@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+Khojki&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=PT+Serif:wght@400;700&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=PT+Serif:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&family=PT+Serif:wght@400;700&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -32,4 +32,10 @@
     font-family: "Abril Fatface", serif;
     font-weight: 400;
     font-style: normal;
-  }
+}
+
+@layer utilities {
+    .my-btn-hover {
+        @apply relative w-fit after:absolute after:left-0 after:content-[''] after:bg-orange-700 after:h-[2px] after:-bottom-[2px] after:duration-300 after:w-[0%] hover:after:w-[100%];
+    }
+}

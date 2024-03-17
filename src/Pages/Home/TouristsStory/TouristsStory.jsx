@@ -57,7 +57,7 @@ const TouristsStory = () => {
     return (
         <div className="max-w-screen-xl mx-auto mt-16">
             <div className="text-center" data-aos="fade-up">
-                <span className="text-3xl lg:text-5xl border-l-4 border-orange-700 pl-5 text-white abril-fatface-regular tracking-widest">
+                <span className="text-3xl lg:text-5xl text-white abril-fatface-regular tracking-widest">
                     Tourists Story
                 </span>
             </div>
@@ -89,7 +89,7 @@ const TouristsStory = () => {
                                 {story.title}
                             </h1>
                             <h3 className="font-mono">{story.subtitle}</h3>
-                            <p>
+                            <p className="my-btn-hover">
                                 <Link>Read more</Link>
                             </p>
                         </div>
