@@ -19,7 +19,7 @@ const TourTypeSwiper = () => {
         const updateSlidesPerView = () => {
             if (window.innerWidth < 640) {
                 setSlidesPerView(2);
-            } else if (window.innerWidth < 767) {
+            } else if (window.innerWidth < 768) {
                 setSlidesPerView(3);
             } else {
                 setSlidesPerView(4);

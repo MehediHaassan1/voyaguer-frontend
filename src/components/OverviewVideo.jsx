@@ -2,7 +2,10 @@ import ReactPlayer from "react-player";
 
 const OverviewVideo = () => {
     return (
-        <div className="h-[250px] md:h-[350px] lg:h-[450px]">
+        <div
+            className="h-[250px] md:h-[350px] lg:h-[450px] rounded overflow-hidden"
+            data-aos="fade-up"
+        >
             <ReactPlayer
                 muted={true}
                 autoPlay={true}

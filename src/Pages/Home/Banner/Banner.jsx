@@ -19,7 +19,7 @@ const Banner = () => {
                             Journey into the Unknown
                         </h1>
                         <p
-                            className="md:text-xl"
+                            className="md:text-xl font-mono"
                             data-aos="fade-up"
                             data-aos-delay="200"
                             data-aos-offset="0"
