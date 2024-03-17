@@ -6,6 +6,7 @@ import TourType from "../TourType/TourType";
 import TouristsStory from "../TouristsStory/TouristsStory";
 import SpecialOffer from "../SpecialOffer/SpecialOffer";
 import PopularDestinations from "../PopularDestinations/PopularDestinations";
+import PopularPackages from "../PopularPackages/PopularPackages";
 
 const Home = () => {
     const user = false;
@@ -18,9 +19,10 @@ const Home = () => {
             <SearchTours></SearchTours>
             <TravelAndTourism></TravelAndTourism>
             <TourType></TourType>
+            <PopularDestinations></PopularDestinations>
+            <PopularPackages></PopularPackages>
             <TouristsStory></TouristsStory>
             {!user && <SpecialOffer></SpecialOffer>}
-            <PopularDestinations></PopularDestinations>
         </div>
     );
 };

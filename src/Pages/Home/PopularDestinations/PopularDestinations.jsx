@@ -25,7 +25,7 @@ const PopularDestinations = () => {
     ];
     return (
         <div className="max-w-screen-xl mx-auto mt-16">
-            <div className="text-center text-white">
+            <div className="text-center text-white" data-aos="fade-up">
                 <h1 className="text-3xl lg:text-5xl ont-bold ">
                     Popular Destinations
                 </h1>
@@ -46,7 +46,7 @@ const PopularDestinations = () => {
                             <img
                                 src={destination.image}
                                 alt={destination.cityName}
-                                className="h-56"
+                                className="h-56 w-full"
                             />
                             <h1 className="absolute bottom-0 text-3xl text-white pl-4 pb-4">
                                 {destination.cityName}
