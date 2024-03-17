@@ -13,7 +13,7 @@ const Banner = () => {
                 <div className="flex items-center justify-center h-screen">
                     <div className="text-white text-center space-y-4 max-w-md">
                         <h1
-                            className="text-3xl md:text-5xl abril-fatface-regular uppercase tracking-widest"
+                            className="text-3xl lg:text-5xl abril-fatface-regular uppercase tracking-widest"
                             data-aos="fade-up"
                         >
                             Journey into the Unknown

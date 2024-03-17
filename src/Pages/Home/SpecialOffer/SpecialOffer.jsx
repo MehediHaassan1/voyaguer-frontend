@@ -13,7 +13,7 @@ const SpecialOffer = () => {
                             <h3 className="font-mono md:text-xl ">
                                 Go & Discover
                             </h3>
-                            <h3 className="text-3xl md:text-5xl font-bold">
+                            <h3 className="text-3xl lg:text-5xl font-bold">
                                 Get Special Offer
                             </h3>
                             <p className="font-mono md:text-xl">
