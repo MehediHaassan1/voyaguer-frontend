@@ -9,7 +9,7 @@ const PopularPackages = () => {
             tripName: "Cox's Bazar",
             location: "Cox’s Bazar",
             image: "https://images.unsplash.com/photo-1619177383949-f03975e50b19?q=80&w=1632&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-            price: 750,
+            price: 300,
             duration: "3 days",
             description: `Explore the picturesque town of Cox's Bazar and its neighboring islands on this two-day tour`,
             review: 4.1,
@@ -20,7 +20,7 @@ const PopularPackages = () => {
             tripName: "Cox's Bazar",
             location: "Cox’s Bazar",
             image: "https://images.unsplash.com/photo-1619177383949-f03975e50b19?q=80&w=1632&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-            price: 750,
+            price: 250,
             duration: "2 days",
             description: `Explore the picturesque town of Cox's Bazar and its neighboring islands on this two-day tour`,
             review: 4.5,
@@ -31,7 +31,7 @@ const PopularPackages = () => {
             tripName: "Cox's Bazar",
             location: "Cox’s Bazar",
             image: "https://images.unsplash.com/photo-1619177383949-f03975e50b19?q=80&w=1632&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-            price: 750,
+            price: 450,
             duration: "6 days",
             description: `Explore the picturesque town of Cox's Bazar and its neighboring islands on this two-day tour`,
             review: 4,
@@ -74,7 +74,7 @@ const PopularPackages = () => {
                                     {trip.description}
                                 </p>
                             </div>
-                            <div className="pl-4 mt-10 pb-5 flex items-center justify-between">
+                            <div className="px-4 pb-5 mt-10 space-y-4 lg:space-y-0 lg:flex items-center justify-between">
                                 <div className="flex items-center gap-4">
                                     <ReactStarsRating
                                         value={trip.review}
@@ -96,7 +96,7 @@ const PopularPackages = () => {
                 ))}
             </div>
             <div className="text-center mt-10">
-                <Link className="my-btn-hover text-white py-1 px-3 bg-orange-700 hover:bg-transparent hover:text-orange-700 duration-300 font-bold tracking-wide">
+                <Link className="my-btn-hover text-white py-1 px-3 bg-orange-700 hover:bg-transparent  duration-300 font-bold tracking-wide rounded">
                     {" "}
                     See more
                 </Link>

@@ -38,4 +38,8 @@
     .my-btn-hover {
         @apply relative w-fit after:absolute after:left-0 after:content-[''] after:bg-orange-700 after:h-[2px] after:-bottom-[2px] after:duration-300 after:w-[0%] hover:after:w-[100%];
     }
+
+    .swiper-btns {
+        @apply w-12 h-12 text-4xl border-none outline-none text-orange-700/70 hover:text-orange-700;
+    }
 }

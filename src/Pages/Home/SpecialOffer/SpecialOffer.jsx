@@ -28,7 +28,7 @@ const SpecialOffer = () => {
                     <div className="md:w-1/2 flex items-center justify-center">
                         <div className="relative ">
                             <h1 className="font-black">
-                                <span className="text-6xl md:text-9xl">35</span>
+                                <span className="text-7xl md:text-9xl">35</span>
                                 <span className="text-3xl md:text-6xl">%</span>
                             </h1>
                             <p className="text-3xl md:text-6xl uppercase font-black rounded-full bg-[#F16D2A] text-center absolute -bottom-6 left-6 md:-bottom-10 md:left-20 py-1 px-4">

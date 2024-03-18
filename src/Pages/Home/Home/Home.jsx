@@ -7,6 +7,7 @@ import TouristsStory from "../TouristsStory/TouristsStory";
 import SpecialOffer from "../SpecialOffer/SpecialOffer";
 import PopularDestinations from "../PopularDestinations/PopularDestinations";
 import PopularPackages from "../PopularPackages/PopularPackages";
+import Testimonials from "../Testimonials/Testimonials";
 
 const Home = () => {
     const user = false;
@@ -23,6 +24,8 @@ const Home = () => {
             <PopularPackages></PopularPackages>
             <TouristsStory></TouristsStory>
             {!user && <SpecialOffer></SpecialOffer>}
+            <Testimonials></Testimonials>
+            <div className="min-h-screen max-w-screen-xl mx-auto"></div>
         </div>
     );
 };
