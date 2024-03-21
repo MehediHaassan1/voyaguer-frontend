@@ -119,7 +119,7 @@ const Blogs = () => {
                 {pathname === "/" && (
                     <Link
                         to="/blogs"
-                        className="rounded py-2 px-4 bg-orange-700 text-white font-semibold"
+                        className="my-btn-hover hover:bg-transparent duration-300 rounded py-2 px-4 bg-orange-700 text-white font-semibold"
                     >
                         See more
                     </Link>
