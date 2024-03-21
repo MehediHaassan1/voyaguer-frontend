@@ -6,7 +6,7 @@ import "swiper/css";
 import "swiper/css/effect-creative";
 import "swiper/css/navigation";
 import { Navigation, EffectCreative, Autoplay } from "swiper/modules";
-import SwiperNavButtons from "../../../components/SwiperNavButtons";
+// import SwiperNavButtons from "../../../components/SwiperNavButtons";
 
 const Testimonials = () => {
     const data = [
@@ -104,7 +104,7 @@ const Testimonials = () => {
                         ))}
 
                         <div className="absolute bottom-0 right-0 z-10 pb-4">
-                            <SwiperNavButtons></SwiperNavButtons>
+                            {/* <SwiperNavButtons></SwiperNavButtons> */}
                         </div>
                     </Swiper>
                 </div>
