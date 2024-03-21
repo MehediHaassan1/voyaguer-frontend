@@ -8,6 +8,7 @@ import SpecialOffer from "../SpecialOffer/SpecialOffer";
 import PopularDestinations from "../PopularDestinations/PopularDestinations";
 import PopularPackages from "../PopularPackages/PopularPackages";
 import Testimonials from "../Testimonials/Testimonials";
+import Blogs from "../../Shared/Blogs/Blogs";
 
 const Home = () => {
     const user = false;
@@ -25,7 +26,7 @@ const Home = () => {
             <TouristsStory></TouristsStory>
             {!user && <SpecialOffer></SpecialOffer>}
             <Testimonials></Testimonials>
-            <div className="min-h-screen max-w-screen-xl mx-auto"></div>
+            <Blogs></Blogs>
         </div>
     );
 };

@@ -57,7 +57,7 @@ const TouristsStory = () => {
     return (
         <div className="max-w-screen-xl mx-auto mt-16">
             <div className="text-center" data-aos="fade-up">
-                <span className="text-3xl lg:text-5xl text-white abril-fatface-regular tracking-widest">
+                <span className="text-3xl lg:text-5xl text-white tracking-widest">
                     Tourists Story
                 </span>
             </div>

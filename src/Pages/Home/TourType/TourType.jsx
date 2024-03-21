@@ -5,7 +5,7 @@ const TourType = () => {
         <div className="max-w-screen-xl mx-auto min-h-96 mt-16">
             <div className="text-center  space-y-5 text-white">
                 <h1
-                    className="text-3xl lg:text-5xl abril-fatface-regular"
+                    className="text-3xl lg:text-5xl"
                     data-aos="fade-up"
                     data-aos-delay="200"
                 >

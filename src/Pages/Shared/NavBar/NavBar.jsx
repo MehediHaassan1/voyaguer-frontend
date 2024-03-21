@@ -5,7 +5,7 @@ import { Link, NavLink } from "react-router-dom";
 import logo from "../../../assets/VOYAGUER-LOGO.svg";
 
 const NavBar = () => {
-    const user = true;
+    const user = false;
     return (
         <div
             data-aos="fade-down"
@@ -155,7 +155,7 @@ const NavBar = () => {
                             </li>
                             <li>
                                 <NavLink
-                                    to="/explore"
+                                    to="/community"
                                     className={({ isActive }) =>
                                         [
                                             isActive
@@ -164,12 +164,12 @@ const NavBar = () => {
                                         ].join(" ")
                                     }
                                 >
-                                    Explore
+                                    Community
                                 </NavLink>
                             </li>
                             <li>
                                 <NavLink
-                                    to="/search-for-tours"
+                                    to="/about-us"
                                     className={({ isActive }) =>
                                         [
                                             isActive
@@ -178,21 +178,7 @@ const NavBar = () => {
                                         ].join(" ")
                                     }
                                 >
-                                    Search for Tours
-                                </NavLink>
-                            </li>
-                            <li>
-                                <NavLink
-                                    to="/categories"
-                                    className={({ isActive }) =>
-                                        [
-                                            isActive
-                                                ? "border-b-2 border-orange-700 rounded-none focus:text-white"
-                                                : "rounded-none text-white my-btn-hover",
-                                        ].join(" ")
-                                    }
-                                >
-                                    Categories
+                                    About us
                                 </NavLink>
                             </li>
                             <li>

@@ -24,7 +24,7 @@ const SearchTours = () => {
 
     return (
         <div data-aos="fade-up" className="max-w-screen-xl mx-auto my-20">
-            <h1 className="text-3xl lg:text-5xl text-white text-center tracking-widest abril-fatface-regular font-thin">
+            <h1 className="text-3xl lg:text-5xl text-white text-center tracking-widest font-thin">
                 Search for tours
             </h1>
             <div className="flex flex-col items-center md:flex-row md:items-end md:justify-between md:gap-2 mt-5 lg:mt-10">
