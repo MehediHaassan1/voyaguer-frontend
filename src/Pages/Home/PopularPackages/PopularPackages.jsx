@@ -52,7 +52,7 @@ const PopularPackages = () => {
                 {packageData.map((data, index) => (
                     <div
                         key={index}
-                        className="text-white group hover:cursor-pointer shadow-2xl"
+                        className="text-white group shadow-2xl"
                     >
                         <div data-aos="fade-up" data-aos-delay={index * 100}>
                             <PackageCard data={data}></PackageCard>
