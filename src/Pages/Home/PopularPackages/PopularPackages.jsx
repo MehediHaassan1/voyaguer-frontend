@@ -1,9 +1,9 @@
-import ReactStarsRating from "react-awesome-stars-rating";
-import { GoStopwatch } from "react-icons/go";
+
 import { Link } from "react-router-dom";
+import PackageCard from "../../../components/PackageCard";
 
 const PopularPackages = () => {
-    const tripData = [
+    const packageData = [
         {
             _id: 1,
             tripName: "Cox's Bazar",
@@ -49,48 +49,13 @@ const PopularPackages = () => {
                 </p>
             </div>
             <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-4 lg:gap-10">
-                {tripData.map((trip, index) => (
+                {packageData.map((data, index) => (
                     <div
                         key={index}
                         className="text-white group hover:cursor-pointer shadow-2xl"
                     >
                         <div data-aos="fade-up" data-aos-delay={index * 100}>
-                            <div className="relative">
-                                <img
-                                    src={trip.image}
-                                    alt={trip.tripName}
-                                    className="h-56 w-full"
-                                />
-                                <div className="py-2 px-4 bg-orange-700 text-xl w-fit absolute bottom-4   font-semibold tracking-wide transition-transform group-hover:scale-125">
-                                    <span>$</span>
-                                    <span>{trip.price}</span>
-                                </div>
-                            </div>
-                            <div className="pl-4 pt-6">
-                                <h1 className="text-2xl font-black">
-                                    {trip.tripName}
-                                </h1>
-                                <p className="md:text-xl font-mono mt-4">
-                                    {trip.description}
-                                </p>
-                            </div>
-                            <div className="px-4 pb-5 mt-10 space-y-4 lg:space-y-0 lg:flex items-center justify-between">
-                                <div className="flex items-center gap-4">
-                                    <ReactStarsRating
-                                        value={trip.review}
-                                        className="flex text-orange-700"
-                                        isEdit={false}
-                                        primaryColor="#C2410C"
-                                        secondaryColor="#fff"
-                                        size={20}
-                                    />
-                                    <p>{trip.reviewCount} reviews</p>
-                                </div>
-                                <div className="flex items-center gap-4">
-                                    <GoStopwatch className="w-6 h-6 text-orange-700" />
-                                    {trip.duration}
-                                </div>
-                            </div>
+                            <PackageCard data={data}></PackageCard>
                         </div>
                     </div>
                 ))}

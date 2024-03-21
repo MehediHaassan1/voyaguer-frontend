@@ -31,7 +31,7 @@ const Banner = () => {
                             data-aos="fade-up"
                             data-aos-delay="300"
                             data-aos-offset="0"
-                            className="bg-[#DE7017] rounded py-2 px-6 text-white font-semibold tracking-wider"
+                            className="my-btn-hover text-white py-2 px-5 bg-orange-700 hover:bg-transparent  duration-300 font-bold tracking-wide rounded"
                         >
                             <Link to="/explore">Start a tour</Link>
                         </button>

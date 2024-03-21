@@ -1,9 +1,9 @@
 import ReactPlayer from "react-player";
 
-const OverviewVideo = () => {
+const Overview = () => {
     return (
         <div
-            className="h-[250px] md:h-[350px] lg:h-[450px] rounded overflow-hidden"
+            className="max-w-screen-xl mx-auto h-[250px] md:h-[350px] lg:h-[450px] rounded overflow-hidden"
             data-aos="fade-up"
         >
             <ReactPlayer
@@ -18,4 +18,4 @@ const OverviewVideo = () => {
     );
 };
 
-export default OverviewVideo;
+export default Overview;

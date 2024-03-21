@@ -2,7 +2,6 @@ import { Link, useLocation } from "react-router-dom";
 import BlogCard from "../../../components/BlogCard";
 
 const Blogs = () => {
-    // this is home blog section
     const blogData = [
         {
             author: {
@@ -82,16 +81,14 @@ const Blogs = () => {
     ];
     let homeBlogData;
     const { pathname } = useLocation();
-    
+
     if (pathname === "/") {
         homeBlogData = blogData.slice(0, 2);
     }
     return (
         <div className="max-w-screen-xl mx-auto py-16">
             <div className="text-center text-white" data-aos="fade-up">
-                <h1 className="text-3xl lg:text-5xl ont-bold ">
-                    What’s Our Client’s Words
-                </h1>
+                <h1 className="text-3xl lg:text-5xl ont-bold ">Latest Blogs</h1>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-10 mt-10">
                 {pathname === "/"
