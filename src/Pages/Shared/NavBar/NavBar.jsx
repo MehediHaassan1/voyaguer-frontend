@@ -290,7 +290,7 @@ const NavBar = () => {
                         ) : (
                             <Link
                                 to="/login"
-                                className="bg-[#DE7017] rounded px-6 py-2 text-white font-semibold tracking-wider"
+                                className="bg-[#DE7017] rounded px-6 py-2 text-white font-semibold tracking-wider my-btn-hover duration-300 hover:bg-transparent"
                             >
                                 Login
                             </Link>
