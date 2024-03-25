@@ -1,5 +1,5 @@
 import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import GoogleLogin from "../Shared/GoogleLogin/GoogleLogin";
 import { useForm } from "react-hook-form";
 import { FaEyeSlash, FaEye } from "react-icons/fa";
@@ -12,6 +12,7 @@ const Login = () => {
         watch,
         formState: { errors },
     } = useForm();
+    const navigate = useNavigate();
 
     const [showPassword, setShowPassword] = useState(false);
 
@@ -116,7 +117,10 @@ const Login = () => {
 
                                 <div className="text-sm flex justify-between items-center mt-3">
                                     <p>If you don't have an account...</p>
-                                    <button className="py-2 px-5 ml-3 bg-white border rounded hover:scale-110 duration-300 border-orange-400  ">
+                                    <button
+                                        onClick={() => navigate("/register")}
+                                        className="py-2 px-5 ml-3 bg-white border rounded hover:scale-110 duration-300 border-orange-400  "
+                                    >
                                         Register
                                     </button>
                                 </div>
