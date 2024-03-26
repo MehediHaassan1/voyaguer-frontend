@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { FaEyeSlash, FaEye } from "react-icons/fa";
+import GoogleLogin from "../Shared/GoogleLogin/GoogleLogin";
+import { useNavigate } from "react-router-dom";
 
 const Register = () => {
     const {
@@ -11,6 +13,7 @@ const Register = () => {
     const onSubmit = (data) => console.log(data);
     const [showPassword, setShowPassword] = useState(false);
     const [disable, setDisable] = useState(true);
+    const navigate = useNavigate();
 
     return (
         <div className="max-w-screen-xl mx-auto">
@@ -35,7 +38,7 @@ const Register = () => {
                                 minute
                             </p>
                             <form onSubmit={handleSubmit(onSubmit)}>
-                                <div className="grid grid-cols-2 gap-2">
+                                <div className="grid md:grid-cols-2 gap-2">
                                     <label className="form-control w-full">
                                         <div className="label">
                                             <span className="label-text ">
@@ -117,6 +120,51 @@ const Register = () => {
                                         </div>
                                     </label>
                                 </div>
+                                <label className="form-control w-full max-w-xs">
+                                    <div className="label">
+                                        <span className="label-text">
+                                            Phone number
+                                        </span>
+                                    </div>
+                                    <input
+                                        type="text"
+                                        placeholder="Type here"
+                                        className="input input-bordered w-full focus:outline-none rounded h-10"
+                                        {...register("phoneNumber", {
+                                            required: {
+                                                value: true,
+                                                message: "Required",
+                                            },
+                                            pattern: {
+                                                value: /^[0-9]+$/,
+                                                message: "Only number required",
+                                            },
+                                            minLength: {
+                                                value: 10,
+                                                message: "10 digit number need",
+                                            },
+                                        })}
+                                        style={
+                                            errors.phoneNumber
+                                                ? {
+                                                      border: "1px solid red",
+                                                  }
+                                                : {}
+                                        }
+                                    />
+                                    <div className="label">
+                                        <span className="label-text-alt">
+                                            {errors.phoneNumber && (
+                                                <p
+                                                    role="alert"
+                                                    className="text-red-600"
+                                                >
+                                                    {errors.phoneNumber.message}
+                                                </p>
+                                            )}
+                                        </span>
+                                    </div>
+                                </label>
 
                                 <label className="form-control w-full">
                                     <div className="label">
@@ -257,6 +305,17 @@ const Register = () => {
                                     </button>
                                 </div>
                             </form>
+                            <div className="divider divider-neutral">OR</div>
+                            <GoogleLogin></GoogleLogin>
+                            <div className="text-sm flex justify-between items-center mt-3">
+                                <p>Already have an account...</p>
+                                <button
+                                    onClick={() => navigate("/login")}
+                                    className="py-2 px-5 ml-3 bg-white border rounded hover:scale-110 duration-300 border-orange-400  "
+                                >
+                                    Login
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </div>
