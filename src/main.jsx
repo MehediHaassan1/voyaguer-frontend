@@ -8,6 +8,7 @@ import "react-datepicker/dist/react-datepicker.css";
 
 import AOS from "aos";
 import "aos/dist/aos.css";
+import UserAuthContext, { UserContext } from "./contexts/UserAuthContext.jsx";
 
 AOS.init({ once: true });
 
@@ -15,7 +16,9 @@ ReactDOM.createRoot(document.getElementById("root")).render(
     <React.StrictMode>
         <HelmetProvider>
             <div className="bg-[#0D141A]">
-                <RouterProvider router={router} />
+                <UserAuthContext>
+                    <RouterProvider router={router} />
+                </UserAuthContext>
             </div>
         </HelmetProvider>
     </React.StrictMode>

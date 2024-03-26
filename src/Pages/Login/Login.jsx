@@ -3,13 +3,11 @@ import { Link, useNavigate } from "react-router-dom";
 import GoogleLogin from "../Shared/GoogleLogin/GoogleLogin";
 import { useForm } from "react-hook-form";
 import { FaEyeSlash, FaEye } from "react-icons/fa";
-import { useState } from "react";
 
 const Login = () => {
     const {
         register,
         handleSubmit,
-        watch,
         formState: { errors },
     } = useForm();
     const navigate = useNavigate();
@@ -46,7 +44,6 @@ const Login = () => {
                                             placeholder="Enter Email Address"
                                             className="w-full px-4 py-3 rounded bg-gray-200 mt-2 border focus:border-orange-500 focus:bg-white focus:outline-none"
                                             autoFocus
-                                            autoComplete
                                             {...register("email", {
                                                 required: true,
                                             })}
