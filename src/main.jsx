@@ -8,7 +8,7 @@ import "react-datepicker/dist/react-datepicker.css";
 
 import AOS from "aos";
 import "aos/dist/aos.css";
-import UserAuthContext, { UserContext } from "./contexts/UserAuthContext.jsx";
+import UserAuthContext from "./contexts/UserAuthContext.jsx";
 
 AOS.init({ once: true });
 

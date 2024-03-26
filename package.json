@@ -12,6 +12,7 @@
   "dependencies": {
     "@headlessui/react": "^1.7.18",
     "aos": "^2.3.4",
+    "firebase": "^10.9.0",
     "framer-motion": "^11.0.8",
     "localforage": "^1.10.0",
     "match-sorter": "^6.3.4",

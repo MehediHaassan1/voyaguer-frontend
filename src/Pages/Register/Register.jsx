@@ -3,20 +3,42 @@ import { useForm } from "react-hook-form";
 import { FaEyeSlash, FaEye } from "react-icons/fa";
 import GoogleLogin from "../Shared/GoogleLogin/GoogleLogin";
 import { useNavigate } from "react-router-dom";
+import useUserAuth from "../../hooks/useUserAuth";
+import { Helmet } from "react-helmet-async";
 
 const Register = () => {
+    const { createUser, updateUserData } = useUserAuth();
     const {
         register,
         handleSubmit,
         formState: { errors },
     } = useForm();
-    const onSubmit = (data) => console.log(data);
     const [showPassword, setShowPassword] = useState(false);
     const [disable, setDisable] = useState(true);
     const navigate = useNavigate();
+    const onSubmit = (data) => {
+        console.log(data);
+        const userName = data.firstName + " " + data.lastName;
+        const userEmail = data.email;
+        const userPhone = parseInt(data.phoneNumber);
+
+        createUser(userEmail, data.password)
+            .then((userCredential) => {
+                const user = userCredential.user;
+                updateUserData(userName);
+            })
+            .catch((error) => {
+                const errorCode = error.code;
+                const errorMessage = error.message;
+                console.log(errorCode, errorMessage);
+            });
+    };
 
     return (
         <div className="max-w-screen-xl mx-auto">
+            <Helmet>
+                <title>Register - Voyaguer</title>
+            </Helmet>
             <div className="min-h-screen py-16">
                 <div className="container mx-auto">
                     <div className="flex flex-col lg:flex-row w-10/12 lg:w-8/12 bg-white rounded-xl mx-auto shadow-lg overflow-hidden">

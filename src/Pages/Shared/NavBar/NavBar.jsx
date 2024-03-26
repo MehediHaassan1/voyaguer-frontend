@@ -3,9 +3,20 @@ import { Menu, Transition } from "@headlessui/react";
 import { Fragment } from "react";
 import { Link, NavLink } from "react-router-dom";
 import logo from "../../../assets/VOYAGUER-LOGO.svg";
+import useUserAuth from "../../../hooks/useUserAuth";
 
 const NavBar = () => {
-    const user = false;
+    const { user, logOutUser } = useUserAuth();
+
+    const handleLogOut = () => {
+        logOutUser()
+            .then(() => {
+                console.log("SignOut successful");
+            })
+            .catch((error) => {
+                console.log("An error happened");
+            });
+    };
     return (
         <div
             data-aos="fade-down"
@@ -227,7 +238,12 @@ const NavBar = () => {
                                             </div>
                                             <div>
                                                 <h1 className="text-lg">
-                                                    Hi Mehedi
+                                                    Hi{" "}
+                                                    {
+                                                        user.displayName.split(
+                                                            " "
+                                                        )[0]
+                                                    }
                                                 </h1>
                                             </div>
                                         </Menu.Button>
@@ -272,6 +288,9 @@ const NavBar = () => {
                                                 <Menu.Item>
                                                     {({ active }) => (
                                                         <button
+                                                            onClick={
+                                                                handleLogOut
+                                                            }
                                                             className={`${
                                                                 active
                                                                     ? "bg-[#DE7017] text-white"
