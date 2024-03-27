@@ -8,6 +8,7 @@ import AboutUs from "../Pages/AboutUs/AboutUs";
 import Community from "../Pages/Community/Community";
 import Blogs from "../Pages/Shared/Blogs/Blogs";
 import Register from "../Pages/Register/Register";
+import PrivateRoute from "./PrivateRoute";
 
 const router = createBrowserRouter([
     {
@@ -28,7 +29,11 @@ const router = createBrowserRouter([
             },
             {
                 path: "blogs",
-                element: <Blogs></Blogs>,
+                element: (
+                    <PrivateRoute>
+                        <Blogs></Blogs>
+                    </PrivateRoute>
+                ),
             },
             {
                 path: "contact-us",

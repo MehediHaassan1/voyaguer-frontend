@@ -231,20 +231,20 @@ const NavBar = () => {
                                 >
                                     <div>
                                         <Menu.Button className="inline-flex items-center gap-2 w-full justify-center rounded-full text-sm font-medium text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-white/75">
-                                            <div className="avatar">
-                                                <div className="w-8 rounded-full">
-                                                    <img src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />
-                                                </div>
-                                            </div>
                                             <div>
-                                                <h1 className="text-lg">
-                                                    Hi{" "}
+                                                <h1 className="text-lg capitalize">
+                                                    Hi,{" "}
                                                     {
                                                         user.displayName.split(
                                                             " "
                                                         )[0]
                                                     }
                                                 </h1>
+                                            </div>
+                                            <div className="avatar">
+                                                <div className="w-8 rounded-full">
+                                                    <img src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />
+                                                </div>
                                             </div>
                                         </Menu.Button>
                                     </div>
