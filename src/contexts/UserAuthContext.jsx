@@ -10,6 +10,7 @@ import {
     signInWithPopup,
 } from "firebase/auth";
 import app from "../firebaseUtils/firebaseConfig";
+import usePublicApi from "../hooks/usePublicApi";
 
 export const UserContext = createContext(null);
 
@@ -20,6 +21,7 @@ const googleProvider = new GoogleAuthProvider();
 const UserAuthContext = ({ children }) => {
     const [user, setUser] = useState(null);
     const [loading, setLoading] = useState(true);
+    const publicApi = usePublicApi();
 
     const createUser = (email, password) => {
         setLoading(true);
@@ -34,12 +36,22 @@ const UserAuthContext = ({ children }) => {
     };
 
     useEffect(() => {
-        const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
+        const unsubscribe = onAuthStateChanged(auth, async (currentUser) => {
             if (currentUser) {
                 setUser(currentUser);
-                setLoading(false);
+                const userEmail = { email: currentUser.email };
+                const verifyUserRes = await publicApi.post(
+                    "/api/v1/jwt",
+                    userEmail
+                );
+                const token = verifyUserRes.data.token;
+                if (token) {
+                    localStorage.setItem("access-token", token);
+                    setLoading(false);
+                }
             } else {
                 setUser(null);
+                localStorage.removeItem("access-token");
                 setLoading(false);
             }
         });

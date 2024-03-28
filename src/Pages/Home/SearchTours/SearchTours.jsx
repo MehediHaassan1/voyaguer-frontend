@@ -34,10 +34,11 @@ const SearchTours = () => {
                             Destinations
                         </span>
                     </div>
-                    <select className="select select-bordered select-sm rounded bg-zinc-950 text-white">
-                        <option disabled selected>
-                            Pick one
-                        </option>
+                    <select
+                        defaultValue="Pick one"
+                        className="select select-bordered select-sm rounded bg-zinc-950 text-white"
+                    >
+                        <option disabled>Pick one</option>
                         <option>Star Wars</option>
                         <option>Harry Potter</option>
                         <option>Lord of the Rings</option>
@@ -51,10 +52,11 @@ const SearchTours = () => {
                             Number of travelers
                         </span>
                     </div>
-                    <select className="select select-bordered select-sm rounded bg-zinc-950 text-white">
-                        <option disabled selected>
-                            Number of travelers
-                        </option>
+                    <select
+                        defaultValue="Number of travelers"
+                        className="select select-bordered select-sm rounded bg-zinc-950 text-white"
+                    >
+                        <option disabled>Number of travelers</option>
                         <option>5</option>
                         <option>6</option>
                         <option>7</option>

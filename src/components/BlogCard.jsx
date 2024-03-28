@@ -1,8 +1,7 @@
 import { Link } from "react-router-dom";
 
 const BlogCard = ({ data }) => {
-    console.log(data);
-    const { author, blogPost } = data;
+    const { _id, author, blogPost } = data;
     return (
         <div className="rounded-lg flex items-center gap-4 border border-slate-600 h-60">
             <div className="w-1/2 h-full">
@@ -23,7 +22,9 @@ const BlogCard = ({ data }) => {
                     </p>
                     <p className="text-base text-gray-400">{blogPost?.date}</p>
                 </div>
-                <Link className="my-btn-hover">Read more</Link>
+                <Link className="my-btn-hover" to={`/blog/details/${_id}`}>
+                    Read more
+                </Link>
             </div>
         </div>
     );

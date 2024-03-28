@@ -9,6 +9,7 @@ import Community from "../Pages/Community/Community";
 import Blogs from "../Pages/Shared/Blogs/Blogs";
 import Register from "../Pages/Register/Register";
 import PrivateRoute from "./PrivateRoute";
+import BlogDetails from "../Pages/BlogDetails/BlogDetails";
 
 const router = createBrowserRouter([
     {
@@ -29,9 +30,13 @@ const router = createBrowserRouter([
             },
             {
                 path: "blogs",
+                element: <Blogs></Blogs>,
+            },
+            {
+                path: "blog/details/:blogId",
                 element: (
                     <PrivateRoute>
-                        <Blogs></Blogs>
+                        <BlogDetails></BlogDetails>
                     </PrivateRoute>
                 ),
             },
