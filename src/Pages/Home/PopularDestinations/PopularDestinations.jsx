@@ -14,8 +14,8 @@ const PopularDestinations = () => {
         },
         {
             _id: 3,
-            cityName: "Saint Martin's",
-            image: "https://images.unsplash.com/photo-1705941067487-b2dc067bc26c?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+            cityName: "Bandarban",
+            image: "https://images.unsplash.com/photo-1577975278781-df39cbba1d2f?q=80&w=1552&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
         },
         {
             _id: 4,
@@ -48,7 +48,10 @@ const PopularDestinations = () => {
                                 alt={destination.cityName}
                                 className="h-56 w-full"
                             />
-                            <h1 className="absolute bottom-0 text-3xl text-white pl-4 pb-4">
+                            <h1
+                                className="absolute bottom-0 text-3xl text-white pl-4 pb-4 tooltip w-full flex items-start"
+                                data-tip={destination.cityName}
+                            >
                                 {destination.cityName}
                             </h1>
                         </div>

@@ -4,8 +4,10 @@ import { GoStopwatch } from "react-icons/go";
 import { FaRegHeart, FaHeart } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { IoIosArrowRoundForward } from "react-icons/io";
+import useUserAuth from "../hooks/useUserAuth";
 
 const PackageCard = ({ data }) => {
+    const { user } = useUserAuth();
     const [wishList, setWishList] = useState(false);
     return (
         <div>
@@ -19,18 +21,20 @@ const PackageCard = ({ data }) => {
                     <span>$</span>
                     <span>{data.price}</span>
                 </div>
-                <div className="absolute right-0 bottom-0">
-                    <button
-                        className="btn bg-transparent border-none hover:bg-transparent"
-                        onClick={() => setWishList(!wishList)}
-                    >
-                        {wishList ? (
-                            <FaHeart className="h-6 w-6 text-red-600"></FaHeart>
-                        ) : (
-                            <FaRegHeart className="text-white h-6 w-6"></FaRegHeart>
-                        )}
-                    </button>
-                </div>
+                {user && (
+                    <div className="absolute right-0 bottom-0">
+                        <button
+                            className="btn bg-transparent border-none hover:bg-transparent"
+                            onClick={() => setWishList(!wishList)}
+                        >
+                            {wishList ? (
+                                <FaHeart className="h-6 w-6 text-red-600"></FaHeart>
+                            ) : (
+                                <FaRegHeart className="text-white h-6 w-6"></FaRegHeart>
+                            )}
+                        </button>
+                    </div>
+                )}
             </div>
             <div className="pl-4 pt-6">
                 <h1 className="text-2xl font-black">{data.tripName}</h1>
